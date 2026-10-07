@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { pledgeTiers } from "@/lib/pledgeTiers";
 import { PledgeButton } from "@/components/PledgeButton";
 import { CopyrightYear } from "@/components/CopyrightYear";
@@ -117,7 +118,9 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-riga-black px-6 py-10 text-white/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-xs sm:flex-row">
-          <span>© <CopyrightYear /> Topanga Film · Riga Brothers</span>
+          <span>
+            © <Suspense fallback="2026"><CopyrightYear /></Suspense> Topanga Film · Riga Brothers
+          </span>
           <div className="flex gap-6">
             <Link href="/terms-of-service" className="hover:text-white">
               Terms of Service
