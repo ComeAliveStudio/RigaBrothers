@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { pledgeTiers } from "@/lib/pledgeTiers";
@@ -57,14 +56,13 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-sm">
-            <Image
-              src="/riga-brothers-poster.png"
-              alt="Riga Brothers — two figures walking, leaving footprints behind"
-              width={960}
-              height={1200}
-              className="w-full"
-              priority
+          <div className="relative mx-auto w-full overflow-hidden rounded-sm bg-black" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src="https://player.vimeo.com/video/1198905992?h=77aedee7fb&title=0&byline=0&portrait=0&color=8b1a1a"
+              className="absolute inset-0 h-full w-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="Riga Brothers — Teaser"
+              frameBorder={0}
             />
           </div>
         </div>
