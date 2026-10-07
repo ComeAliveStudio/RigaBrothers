@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --riga-red: #a3282c;
-  --riga-black: #1a1a1a;
-  --riga-slate: #565656;
-  --riga-mist: #faf9f7;
-  --riga-border: #e6e2dd;
-  --riga-text: #262626;
+  /* Matches the original Replit build's CSS vars: --primary: 351 76% 33% etc. */
+  --riga-red: #8b1a2e;
+  --riga-black: #141414;
+  --riga-slate: #6b6b6b;
+  --riga-mist: #fcfcfc;
+  --riga-border: #e0e0e0;
+  --riga-text: #141414;
   --background: var(--riga-mist);
   --foreground: var(--riga-text);
 }
