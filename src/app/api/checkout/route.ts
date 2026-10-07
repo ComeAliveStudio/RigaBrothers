@@ -2,10 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { pledgeTiers } from "@/lib/pledgeTiers";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+// Created inside the handler, not at module scope, so Next.js can collect
+// this route's config at build time without STRIPE_SECRET_KEY being set.
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY!);
+}
 
 export async function POST(req: NextRequest) {
   try {
+    const stripe = getStripe();
     const { tierId } = await req.json();
     const tier = pledgeTiers.find((t) => t.id === tierId);
 
