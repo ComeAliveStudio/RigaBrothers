@@ -4,10 +4,15 @@ import { Suspense } from "react";
 import { pledgeTiers } from "@/lib/pledgeTiers";
 import { PledgeButton } from "@/components/PledgeButton";
 import { CopyrightYear } from "@/components/CopyrightYear";
+import { PledgeStatusBanner } from "@/components/PledgeStatusBanner";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <Suspense fallback={null}>
+        <PledgeStatusBanner />
+      </Suspense>
+
       {/* Hero */}
       <header className="bg-riga-black text-white">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
