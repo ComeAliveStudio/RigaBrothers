@@ -75,7 +75,10 @@ export default function Home() {
           <p className="mb-8 font-mono text-xs uppercase tracking-[0.3em] text-riga-red">
             Feature Documentary · 2026 · Italy / Latvia
           </p>
-          <h1 className="mb-8 font-[family-name:var(--font-hero)] text-7xl uppercase leading-none tracking-wide text-riga-black drop-shadow-sm md:text-9xl lg:text-[11rem]">
+          <h1
+            className="mb-8 font-[family-name:var(--font-hero)] text-7xl uppercase leading-none tracking-tight text-riga-black drop-shadow-sm md:text-9xl lg:text-[11rem]"
+            style={{ fontWeight: 700 }}
+          >
             <span className="text-riga-red">Riga</span> Brothers
           </h1>
           <p className="mx-auto mb-14 max-w-2xl text-lg font-light leading-relaxed tracking-wide text-riga-black/60 md:text-2xl">
