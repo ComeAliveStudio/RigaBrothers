@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Space_Mono, Oswald } from "next/font/google";
+import { Inter, Playfair_Display, Oswald } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,12 +12,6 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
 });
 
 // Closest Google-hosted stand-in for the "D DIN Exp" hero typeface used on the
@@ -57,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} ${spaceMono.variable} ${oswald.variable} antialiased`}
+        className={`${inter.variable} ${playfair.variable} ${oswald.variable} antialiased`}
       >
         {children}
       </body>

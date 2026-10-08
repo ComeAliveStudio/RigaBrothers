@@ -23,7 +23,9 @@
   --font-hero: var(--font-oswald);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-space-mono);
+  /* Intentionally the browser's default monospace, matching the original
+     Replit site — not a loaded webfont. */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 body {
