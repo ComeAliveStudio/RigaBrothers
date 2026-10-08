@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Oswald } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,13 +15,12 @@ const playfair = Playfair_Display({
   weight: ["400", "600", "700"],
 });
 
-// Closest Google-hosted stand-in for the "D DIN Exp" hero typeface used on the
-// original Replit site. Swap for the real D-DINExp-Bold.woff via next/font/local
-// once the licensed font file is available in /src/app/fonts.
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+// The actual hero typeface from the original Replit site.
+const dDinExp = localFont({
+  src: "./fonts/D-DINExp-Bold.woff",
+  variable: "--font-d-din-exp",
+  weight: "700",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} ${oswald.variable} antialiased`}
+        className={`${inter.variable} ${playfair.variable} ${dDinExp.variable} antialiased`}
       >
         {children}
       </body>

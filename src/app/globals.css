@@ -20,7 +20,7 @@
   --color-riga-slate: var(--riga-slate);
   --color-riga-mist: var(--riga-mist);
   --color-riga-border: var(--riga-border);
-  --font-hero: var(--font-oswald);
+  --font-hero: var(--font-d-din-exp);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
   /* Intentionally the browser's default monospace, matching the original

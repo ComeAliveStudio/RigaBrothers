@@ -25,14 +25,13 @@ npm run dev
 
 ## Still to do
 
-- [ ] Run `supabase/schema.sql` against the Supabase project to use (new
-      project, or an extension of the existing Come Alive Vision project —
-      to be decided)
+- [x] Supabase project `riga-brothers` created and `supabase/schema.sql` run
+- [x] Hero typeface — the licensed `D-DINExp-Bold.woff` is loaded via
+      `next/font/local` (`src/app/fonts/`), matching the original site
 - [ ] Port the full press kit copy into `src/app/press/page.tsx`
       (currently a placeholder)
-- [ ] Confirm the hero typeface — `Oswald` (Google Fonts) is a temporary
-      stand-in for the original "D DIN Exp" look; swap via
-      `next/font/local` once the licensed `.woff` file is available
+- [ ] Wire the newsletter form (`src/components/NewsletterForm.tsx`) to a
+      real list — currently a visual-only placeholder
 - [ ] Fill in the Topanga Film VAT/Tax ID, owner name, and competent court
       placeholders in `/terms-of-service` and `/privacy-policy`
 - [ ] Add Stripe live-mode keys in Vercel's environment variables once
