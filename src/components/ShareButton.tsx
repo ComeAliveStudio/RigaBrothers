@@ -20,7 +20,7 @@ export function ShareButton({ dark = false, fullWidth = false }: { dark?: boolea
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // no-op — clipboard access denied
+      // no-op - clipboard access denied
     }
   }
 

@@ -24,7 +24,7 @@
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
   /* Intentionally the browser's default monospace, matching the original
-     Replit site — not a loaded webfont. */
+     Replit site - not a loaded webfont. */
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 

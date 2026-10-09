@@ -74,7 +74,7 @@ export const pledgeTiers: PledgeTier[] = [
       "Early access to Riga Brothers",
       "Access to Back to Alibek (1991)",
       "Access to Riga Brothers (1992)",
-      "Access to Riga Brothers — 30 Years Later",
+      "Access to Riga Brothers - 30 Years Later",
     ],
     tagline: "Experience the complete 30-year journey.",
   },

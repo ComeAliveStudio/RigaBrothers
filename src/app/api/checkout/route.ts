@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
             currency: "eur",
             unit_amount: tier.amount * 100,
             product_data: {
-              name: `Riga Brothers — ${tier.title}`,
+              name: `Riga Brothers - ${tier.title}`,
               description: tier.tagline,
             },
           },

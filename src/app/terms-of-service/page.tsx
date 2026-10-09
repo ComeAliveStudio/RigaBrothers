@@ -14,9 +14,10 @@ export default function TermsOfService() {
 
       <p>
         Welcome to rigabrothers.com (the &ldquo;Platform,&rdquo; &ldquo;Site,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo;
-        or &ldquo;our&rdquo;), operated by <strong>Topanga Film</strong>, a sole proprietorship (ditta
-        individuale) registered in Italy, with registered office at Via Roma, 14, 21013 Gallarate (VA),
-        Italy, VAT/Tax ID <strong>[P.IVA / CODICE FISCALE — DA CONFERMARE]</strong> (&ldquo;we,&rdquo; &ldquo;us&rdquo;).
+        or &ldquo;our&rdquo;), operated by <strong>Come Alive Video &amp; Audio Solutions e.U.</strong>, a sole
+        proprietorship (Einzelunternehmen) registered in Austria, owned by Angelo D&apos;Agostino, with
+        registered office at Neustiftgasse 10/20, 1070 Vienna, Austria, VAT ID <strong>ATU76545703</strong>{" "}
+        (&ldquo;we,&rdquo; &ldquo;us&rdquo;).
       </p>
 
       <p>
@@ -65,8 +66,9 @@ export default function TermsOfService() {
         <li>
           <strong>Right of Withdrawal (EU consumers):</strong> where your pledge includes a reward that
           constitutes digital content or a service, you may have a 14-day withdrawal right under EU
-          consumer protection law (implemented in Italy under the Codice del Consumo), unless you have
-          expressly consented to immediate performance and acknowledged the loss of this right
+          consumer protection law (implemented in Austria under the Konsumentenschutzgesetz, KSchG),
+          unless you have expressly consented to immediate performance and acknowledged the loss of
+          this right
         </li>
         <li>Refund requests can be directed to crowdfunding@rigabrothers.com and will be considered on a case-by-case basis prior to campaign closure</li>
       </ul>
@@ -81,10 +83,11 @@ export default function TermsOfService() {
 
       <h2>6 · Intellectual Property</h2>
       <p>
-        All content on the Site — including but not limited to the Film&apos;s title, poster, trailer,
-        footage, stills, text, and branding — is the property of Topanga Film or its licensors and is
-        protected by Italian, EU, and international copyright and trademark law. Pledging does not
-        grant you any license to reproduce, distribute, or commercially use this content.
+        All content on the Site - including but not limited to the Film&apos;s title, poster, trailer,
+        footage, stills, text, and branding - is the property of Come Alive Video &amp; Audio Solutions
+        e.U. or its licensors and is protected by Austrian, EU, and international copyright and
+        trademark law. Pledging does not grant you any license to reproduce, distribute, or
+        commercially use this content.
       </p>
 
       <h2>7 · Acceptable Use</h2>
@@ -106,10 +109,10 @@ export default function TermsOfService() {
 
       <h2>9 · Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by applicable law, Topanga Film shall not be liable for any
-        indirect, incidental, special, or consequential damages arising out of or in connection with
-        your use of the Site or your pledge. Nothing in these Terms limits liability that cannot be
-        excluded under applicable Italian or EU law.
+        To the maximum extent permitted by applicable law, Come Alive Video &amp; Audio Solutions e.U.
+        shall not be liable for any indirect, incidental, special, or consequential damages arising out
+        of or in connection with your use of the Site or your pledge. Nothing in these Terms limits
+        liability that cannot be excluded under applicable Austrian or EU law.
       </p>
 
       <h2>10 · Third-Party Services</h2>
@@ -127,27 +130,28 @@ export default function TermsOfService() {
 
       <h2>12 · Governing Law and Jurisdiction</h2>
       <p>
-        These Terms are governed by the laws of Italy, without prejudice to any mandatory consumer
+        These Terms are governed by the laws of Austria, without prejudice to any mandatory consumer
         protection rights you may have under the laws of your country of residence if you are an EU
         consumer. Any disputes shall be subject to the exclusive jurisdiction of the competent court of{" "}
-        <strong>[Foro di Busto Arsizio — da confermare in base alla circoscrizione giudiziaria di Gallarate]</strong>,
-        unless mandatory consumer protection law provides otherwise (in which case, the consumer&apos;s
-        local court of residence applies).
+        <strong>Vienna, Austria</strong>, unless mandatory consumer protection law provides otherwise
+        (in which case, the consumer&apos;s local court of residence applies).
       </p>
 
       <h2>13 · Contact</h2>
       <div className="legal-contact">
-        <strong>Topanga Film</strong>
+        <strong>Come Alive Video &amp; Audio Solutions e.U.</strong>
         <br />
-        Via Roma, 14 · 21013 Gallarate (VA), Italy
+        Angelo D&apos;Agostino
+        <br />
+        Neustiftgasse 10/20 · 1070 Vienna, Austria
         <br />
         Email: <a href="mailto:crowdfunding@rigabrothers.com">crowdfunding@rigabrothers.com</a>
       </div>
 
       <p className="legal-disclaimer">
         This document is a template and does not constitute legal advice. We recommend review by a
-        qualified Italian legal professional prior to relying on it, particularly to confirm the
-        VAT/Tax ID, competent court, and crowdfunding-specific regulations as the campaign progresses.
+        qualified Austrian legal professional prior to relying on it, particularly to confirm
+        crowdfunding-specific regulations as the campaign progresses.
       </p>
     </div>
   );

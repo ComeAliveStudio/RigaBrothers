@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
 
     if (error) {
       console.error("Failed to write pledge to Supabase", error);
-      // Still return 200 — Stripe doesn't need to retry over a DB write
+      // Still return 200 - Stripe doesn't need to retry over a DB write
       // issue on our side; this is logged for manual reconciliation.
     }
   }

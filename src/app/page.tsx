@@ -18,7 +18,7 @@ const timeline = [
   {
     year: "1992",
     title: "The Original Film",
-    desc: 'Filming "Riga Brothers" in newly independent Latvia — original archive footage preserved across decades.',
+    desc: 'Filming "Riga Brothers" in newly independent Latvia - original archive footage preserved across decades.',
   },
   {
     year: "2022",
@@ -127,11 +127,11 @@ export default function Home() {
             <div className="space-y-8 lg:col-span-7">
               <p className="font-[family-name:var(--font-serif)] text-3xl leading-snug text-riga-black md:text-4xl">
                 In 1991, an Italian filmmaker meets two young Latvians on a UNESCO mission in the
-                Caucasus — as the Soviet Union collapses around them.
+                Caucasus - as the Soviet Union collapses around them.
               </p>
               <p className="text-lg font-light leading-relaxed text-riga-slate">
                 In 1992, they return to film the original &ldquo;Riga Brothers&rdquo; documentary in newly
-                independent Latvia — capturing the raw, uncertain energy of a nation reborn.
+                independent Latvia - capturing the raw, uncertain energy of a nation reborn.
               </p>
               <p className="text-lg font-light leading-relaxed text-riga-slate">
                 Thirty years later, with war returning to Europe, Giorgio travels back. Guncho and
@@ -158,7 +158,7 @@ export default function Home() {
       {/* Watch the Teaser */}
       <section className="bg-riga-black py-32">
         <div className="container mx-auto max-w-4xl px-6">
-          <p className="mb-10 text-center font-mono text-xs uppercase tracking-[0.3em] text-white/50">
+          <p className="mb-10 text-center font-mono text-sm uppercase tracking-[0.3em] text-riga-red">
             Watch the Teaser
           </p>
           <div className="relative aspect-video overflow-hidden shadow-2xl">
@@ -167,11 +167,11 @@ export default function Home() {
               className="absolute inset-0 h-full w-full"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
-              title="Riga Brothers — Official Teaser"
+              title="Riga Brothers - Official Teaser"
             />
           </div>
-          <p className="mt-4 text-center font-mono text-xs uppercase tracking-[0.25em] text-white/30">
-            Riga Brothers — Official Teaser
+          <p className="mt-4 text-center font-mono text-sm uppercase tracking-[0.25em] text-riga-red">
+            Riga Brothers - Official Teaser
           </p>
         </div>
       </section>
@@ -355,10 +355,13 @@ export default function Home() {
             <Image src="/riga-brothers-poster.png" alt="Riga Brothers" fill className="object-contain" />
           </div>
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-riga-red">A Film By</p>
-          <div className="mb-4 flex flex-col items-center justify-center gap-3 font-[family-name:var(--font-serif)] text-2xl text-riga-black/80 md:flex-row md:gap-8 md:text-3xl">
-            <span>Giorgio Bonecchi Borgazzi</span>
-            <span className="hidden text-sm text-riga-red/30 md:block">·</span>
-            <span>Attilio Geroni</span>
+          <div className="mb-4 flex flex-col items-center justify-center gap-2">
+            <span className="font-[family-name:var(--font-serif)] text-2xl text-riga-black/80 md:text-3xl">
+              Giorgio Bonecchi Borgazzi
+            </span>
+            <span className="font-[family-name:var(--font-serif)] text-base italic text-riga-black/50 md:text-lg">
+              written with Attilio Geroni
+            </span>
           </div>
           <p className="mb-10 text-sm font-light text-riga-slate">
             Italy / Latvia · 2026 · Feature Documentary
@@ -381,7 +384,7 @@ export default function Home() {
           </div>
 
           <p className="font-mono text-xs uppercase tracking-widest text-riga-black/25">
-            © <Suspense fallback="2026"><CopyrightYear /></Suspense> Riga Brothers Documentary · Topanga Film
+            © <Suspense fallback="2026"><CopyrightYear /></Suspense> Riga Brothers Documentary · Come Alive Video &amp; Audio Solutions e.U.
           </p>
         </div>
       </footer>
@@ -425,7 +428,7 @@ function TierCard({
         <ul className="mb-6 flex-1 space-y-3">
           {tier.perks.map((perk, i) => (
             <li key={i} className="flex items-start gap-3 text-sm font-light leading-snug text-riga-slate">
-              <span className="mt-0.5 shrink-0 font-mono text-riga-red">—</span>
+              <span className="mt-0.5 shrink-0 font-mono text-riga-red">-</span>
               {perk}
             </li>
           ))}
@@ -433,7 +436,7 @@ function TierCard({
         <p className="mb-5 font-mono text-xs italic leading-snug text-riga-black/40">
           &ldquo;{tier.tagline}&rdquo;
         </p>
-        <PledgeButton tierId={tier.id} label={`Select — €${tier.amount}`} />
+        <PledgeButton tierId={tier.id} label={`Select - €${tier.amount}`} />
       </div>
     </div>
   );

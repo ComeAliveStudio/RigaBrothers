@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-// Browser/client-safe client — only ever reads public pledge totals (RLS-restricted).
+// Browser/client-safe client - only ever reads public pledge totals (RLS-restricted).
 export function supabasePublic() {
   return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -9,7 +9,7 @@ export function supabasePublic() {
 }
 
 // Server-only client using the service role key. NEVER import this from a
-// "use client" component — it bypasses RLS and must only run in API routes
+// "use client" component - it bypasses RLS and must only run in API routes
 // (checkout session creation, Stripe webhook handler).
 export function supabaseAdmin() {
   return createClient(

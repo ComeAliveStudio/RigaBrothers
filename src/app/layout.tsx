@@ -24,11 +24,11 @@ const dDinExp = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Riga Brothers — Crowdfunding",
+  title: "Riga Brothers - Crowdfunding",
   description:
     "Support Riga Brothers, a documentary 30 years in the making. Back the project and claim your reward.",
   openGraph: {
-    title: "Riga Brothers — Crowdfunding",
+    title: "Riga Brothers - Crowdfunding",
     description:
       "Support Riga Brothers, a documentary 30 years in the making. Back the project and claim your reward.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Riga Brothers — Crowdfunding",
+    title: "Riga Brothers - Crowdfunding",
     description:
       "Support Riga Brothers, a documentary 30 years in the making. Back the project and claim your reward.",
     images: ["/riga-brothers-poster.png"],
