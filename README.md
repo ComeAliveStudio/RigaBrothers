@@ -28,8 +28,10 @@ npm run dev
 - [x] Supabase project `riga-brothers` created and `supabase/schema.sql` run
 - [x] Hero typeface — the licensed `D-DINExp-Bold.woff` is loaded via
       `next/font/local` (`src/app/fonts/`), matching the original site
-- [ ] Port the full press kit copy into `src/app/press/page.tsx`
-      (currently a placeholder)
+- [x] `/press` now reads from Supabase (`press_kit_sections` table +
+      `press-kit` storage bucket, see `supabase/press_kit_schema.sql`) —
+      [ ] still need to run that SQL in Supabase and upload the actual
+      content/files
 - [ ] Wire the newsletter form (`src/components/NewsletterForm.tsx`) to a
       real list — currently a visual-only placeholder
 - [ ] Fill in the Topanga Film VAT/Tax ID, owner name, and competent court
