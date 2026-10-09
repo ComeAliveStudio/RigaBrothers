@@ -94,6 +94,12 @@ export default function Home() {
             >
               Back This Documentary
             </a>
+            <a
+              href="/press"
+              className="rounded-none border-2 border-riga-black/20 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] text-riga-black transition-all hover:border-riga-black"
+            >
+              Press Kit
+            </a>
             <ShareButton />
           </div>
         </div>
