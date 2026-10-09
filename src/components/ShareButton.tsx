@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function ShareButton({ dark = false }: { dark?: boolean }) {
+export function ShareButton({ dark = false, fullWidth = false }: { dark?: boolean; fullWidth?: boolean }) {
   const [copied, setCopied] = useState(false);
 
   async function handleShare() {
@@ -27,11 +27,11 @@ export function ShareButton({ dark = false }: { dark?: boolean }) {
   return (
     <button
       onClick={handleShare}
-      className={
+      className={`${fullWidth ? "w-full" : ""} rounded-none border-2 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] transition-all ${
         dark
-          ? "rounded-none border-2 border-white/25 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white"
-          : "rounded-none border-2 border-riga-black/20 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] text-riga-black transition-all hover:border-riga-black"
-      }
+          ? "border-white/25 text-white hover:border-white"
+          : "border-riga-black/20 text-riga-black hover:border-riga-black"
+      }`}
     >
       {copied ? "Link copied" : "Share"}
     </button>

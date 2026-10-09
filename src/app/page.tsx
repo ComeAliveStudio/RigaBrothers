@@ -79,20 +79,22 @@ export default function Home() {
 
             <FundingProgress dark />
 
-            <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            <div className="mx-auto flex max-w-md flex-col gap-4 lg:mx-0">
               <a
                 href="#support"
-                className="border-2 border-riga-red bg-riga-red px-10 py-7 text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:bg-[#6d1424] hover:shadow-lg"
+                className="w-full border-2 border-riga-red bg-riga-red px-10 py-7 text-center text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:bg-[#6d1424] hover:shadow-lg"
               >
                 Back This Documentary
               </a>
-              <a
-                href="/press"
-                className="rounded-none border-2 border-white/25 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white"
-              >
-                Press Kit
-              </a>
-              <ShareButton dark />
+              <div className="flex gap-4">
+                <a
+                  href="/press"
+                  className="flex-1 rounded-none border-2 border-white/25 px-10 py-[1.6rem] text-center text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white"
+                >
+                  Press Kit
+                </a>
+                <ShareButton dark fullWidth />
+              </div>
             </div>
           </div>
 
