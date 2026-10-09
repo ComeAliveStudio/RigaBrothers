@@ -59,48 +59,51 @@ export default function Home() {
       </Suspense>
 
       {/* Hero */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#fafafa]">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/riga-brothers-poster.png"
-            alt="Riga Brothers Poster"
-            fill
-            className="scale-105 object-contain object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#fafafa]/30 via-transparent to-[#fafafa]/90" />
-        </div>
-
-        <div className="relative z-10 container mx-auto flex flex-col items-center px-6 pb-40 pt-48 text-center">
-          <p className="mb-8 font-mono text-xs uppercase tracking-[0.3em] text-riga-red">
-            Feature Documentary · 2026 · Italy / Latvia
-          </p>
-          <h1
-            className="mb-8 font-[family-name:var(--font-hero)] text-7xl uppercase leading-none tracking-tight text-riga-black drop-shadow-sm md:text-9xl lg:text-[11rem]"
-            style={{ fontWeight: 700 }}
-          >
-            <span className="text-riga-red">Riga</span> Brothers
-          </h1>
-          <p className="mx-auto mb-14 max-w-2xl text-lg font-light leading-relaxed tracking-wide text-riga-black/60 md:text-2xl">
-            A 30-Year Journey Through Friendship, Freedom and Baltic History
-          </p>
-
-          <FundingProgress />
-
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#support"
-              className="border-2 border-riga-red bg-riga-red px-10 py-7 text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:bg-[#6d1424] hover:shadow-lg"
+      <section className="relative overflow-hidden bg-riga-black">
+        <div className="container relative z-10 mx-auto grid items-center gap-16 px-6 py-28 lg:grid-cols-2 lg:gap-12 lg:py-36">
+          <div className="text-center lg:text-left">
+            <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-riga-red">
+              A Documentary 30 Years in the Making
+            </p>
+            <h1
+              className="mb-8 font-[family-name:var(--font-hero)] text-6xl uppercase leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl"
+              style={{ fontWeight: 700 }}
             >
-              Back This Documentary
-            </a>
-            <a
-              href="/press"
-              className="rounded-none border-2 border-riga-black/20 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] text-riga-black transition-all hover:border-riga-black"
-            >
-              Press Kit
-            </a>
-            <ShareButton />
+              Riga
+              <br />
+              Brothers
+            </h1>
+            <p className="mx-auto mb-12 max-w-xl text-lg font-light leading-relaxed text-white/60 lg:mx-0 md:text-xl">
+              A 30-Year Journey Through Friendship, Freedom and Baltic History
+            </p>
+
+            <FundingProgress dark />
+
+            <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+              <a
+                href="#support"
+                className="border-2 border-riga-red bg-riga-red px-10 py-7 text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:bg-[#6d1424] hover:shadow-lg"
+              >
+                Back This Documentary
+              </a>
+              <a
+                href="/press"
+                className="rounded-none border-2 border-white/25 px-10 py-[1.6rem] text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white"
+              >
+                Press Kit
+              </a>
+              <ShareButton dark />
+            </div>
+          </div>
+
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md bg-white shadow-2xl lg:max-w-none">
+            <Image
+              src="/riga-brothers-poster.png"
+              alt="Riga Brothers Poster"
+              fill
+              className="object-contain p-4"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -138,13 +141,12 @@ export default function Home() {
                 Director: Giorgio Bonecchi Borgazzi · Written by: Attilio Geroni
               </p>
             </div>
-            <div className="group relative aspect-[3/4] overflow-hidden border border-riga-border lg:col-span-5">
-              <div className="absolute inset-0 z-10 bg-riga-red/15 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
+            <div className="group relative aspect-[3/4] overflow-hidden border border-riga-border bg-white lg:col-span-5">
               <Image
                 src="/riga-brothers-poster.png"
                 alt="Riga Brothers Poster"
                 fill
-                className="object-cover grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
               />
             </div>
           </div>
@@ -347,7 +349,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-riga-border bg-riga-mist py-20 text-center">
         <div className="container mx-auto px-6">
-          <div className="relative mx-auto mb-10 h-24 w-40 opacity-30 grayscale">
+          <div className="relative mx-auto mb-10 h-28 w-40 opacity-70">
             <Image src="/riga-brothers-poster.png" alt="Riga Brothers" fill className="object-contain" />
           </div>
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-riga-red">A Film By</p>
