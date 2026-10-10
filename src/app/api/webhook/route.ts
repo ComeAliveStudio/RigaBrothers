@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { supabaseAdmin } from "@/lib/supabase";
+import { getResend, PLEDGE_FROM_EMAIL } from "@/lib/resend";
+import { pledgeTiers } from "@/lib/pledgeTiers";
+import PledgeConfirmation from "@/emails/PledgeConfirmation";
 
 // Created inside the handler, not at module scope, so Next.js can collect
 // this route's config at build time without these env vars being set.
@@ -51,6 +54,27 @@ export async function POST(req: NextRequest) {
       console.error("Failed to write pledge to Supabase", error);
       // Still return 200 - Stripe doesn't need to retry over a DB write
       // issue on our side; this is logged for manual reconciliation.
+    }
+
+    const backerEmail = session.customer_details?.email;
+    if (backerEmail) {
+      try {
+        const tier = pledgeTiers.find((t) => t.id === tierId);
+        await getResend().emails.send({
+          from: PLEDGE_FROM_EMAIL,
+          to: backerEmail,
+          subject: "Your pledge to Riga Brothers is confirmed",
+          react: PledgeConfirmation({
+            backerName: session.customer_details?.name,
+            tierTitle: tier?.title ?? "Riga Brothers Pledge",
+            amount: (session.amount_total ?? 0) / 100,
+          }),
+        });
+      } catch (emailError) {
+        console.error("Failed to send pledge confirmation email", emailError);
+        // Don't fail the webhook over an email delivery issue - the pledge
+        // is already recorded in Supabase either way.
+      }
     }
   }
 

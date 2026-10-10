@@ -9,10 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-email/components": "^1.0.12",
     "@supabase/supabase-js": "^2.117.2",
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "resend": "^6.32.1",
     "stripe": "^23.0.0"
   },
   "devDependencies": {
