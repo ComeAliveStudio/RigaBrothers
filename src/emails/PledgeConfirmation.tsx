@@ -29,7 +29,18 @@ export default function PledgeConfirmation({
 
   return (
     <Html>
-      <Head />
+      <Head>
+        {/* Locks the colour scheme so dark-mode email clients (Gmail, Apple
+            Mail, Outlook) don't auto-invert/lighten our red into pink. */}
+        <meta name="color-scheme" content="light" />
+        <meta name="supported-color-schemes" content="light" />
+        <style>{`
+          :root {
+            color-scheme: light;
+            supported-color-schemes: light;
+          }
+        `}</style>
+      </Head>
       <Preview>Your pledge to Riga Brothers is confirmed - {tierTitle}</Preview>
       <Body style={main}>
         <Container style={container}>
