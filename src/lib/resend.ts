@@ -9,3 +9,4 @@ export function getResend() {
 
 // Must match a verified sending domain in Resend.
 export const PLEDGE_FROM_EMAIL = "Riga Brothers <crowdfunding@rigabrothers.com>";
+export const NEWSLETTER_FROM_EMAIL = PLEDGE_FROM_EMAIL;

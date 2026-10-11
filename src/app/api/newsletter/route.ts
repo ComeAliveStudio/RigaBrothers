@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getResend } from "@/lib/resend";
+import { getResend, NEWSLETTER_FROM_EMAIL } from "@/lib/resend";
+import NewsletterWelcome from "@/emails/NewsletterWelcome";
 
 export async function POST(req: NextRequest) {
   try {
@@ -24,6 +25,19 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error("Failed to add newsletter contact", error);
       return NextResponse.json({ error: "Could not sign up" }, { status: 500 });
+    }
+
+    try {
+      await getResend().emails.send({
+        from: NEWSLETTER_FROM_EMAIL,
+        to: email,
+        subject: "You're on the list - Riga Brothers",
+        react: NewsletterWelcome(),
+      });
+    } catch (emailError) {
+      console.error("Failed to send newsletter welcome email", emailError);
+      // Don't fail the signup over an email delivery issue - the contact is
+      // already saved in the audience either way.
     }
 
     return NextResponse.json({ ok: true });
