@@ -33,6 +33,11 @@ export async function POST(req: NextRequest) {
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
+
+    // Ignore FilmJourney payments (shared Stripe account): not Riga Brothers pledges.
+    if (session.metadata?.film_id || session.metadata?.user_id) {
+      return NextResponse.json({ received: true });
+    }
     const tierId = session.metadata?.tier_id ?? "unknown";
 
     const { error } = await supabaseAdmin().from("pledges").upsert(
