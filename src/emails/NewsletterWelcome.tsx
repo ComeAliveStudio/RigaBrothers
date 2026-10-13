@@ -58,11 +58,16 @@ export default function NewsletterWelcome() {
 
           <Hr style={hr} />
 
+          <Text style={signoffBrand}>RIGA BROTHERS</Text>
+          <Text style={signoffTeam}>Support Team</Text>
+          <Text style={signoffTagline}>A Documentary 30 Years in the Making</Text>
+          <Text style={signoffLink}>
+            <Link href="https://rigabrothers.com" style={footerLink}>
+              rigabrothers.com
+            </Link>
+          </Text>
+
           <Text style={footer}>
-            Riga Brothers Documentary - Come Alive Video &amp; Audio Solutions e.U.
-            <br />
-            Neustiftgasse 10/20, 1070 Vienna, Austria
-            <br />
             Questions? Reply to this email or write to{" "}
             <Link href="mailto:crowdfunding@rigabrothers.com" style={footerLink}>
               crowdfunding@rigabrothers.com
@@ -163,4 +168,31 @@ const footer = {
 
 const footerLink = {
   color: RIGA_RED,
+};
+
+const signoffBrand = {
+  color: RIGA_RED,
+  fontSize: "11px",
+  fontWeight: 700,
+  letterSpacing: "0.25em",
+  textTransform: "uppercase" as const,
+  margin: "0 0 2px",
+};
+
+const signoffTeam = {
+  color: RIGA_BLACK,
+  fontSize: "14px",
+  fontWeight: 600,
+  margin: "0 0 10px",
+};
+
+const signoffTagline = {
+  color: "#6b6b6b",
+  fontSize: "12px",
+  margin: "0 0 4px",
+};
+
+const signoffLink = {
+  fontSize: "12px",
+  margin: "0 0 20px",
 };
