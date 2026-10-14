@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function Press() {
   return (
-    <div className="legal-wrap">
+    <div className="legal-wrap text-center" style={{ maxWidth: 520 }}>
       <p className="legal-brand">RIGA BROTHERS</p>
       <h1>Press Kit</h1>
-      <div className="mb-8 flex max-w-md flex-col gap-3">
+      <div className="mx-auto mb-8 flex max-w-md flex-col gap-3">
         <a
           href="/press/download"
           className="bg-riga-red px-7 py-4 text-center text-[13px] font-bold uppercase tracking-[0.15em] !text-white !no-underline hover:opacity-90"

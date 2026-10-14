@@ -91,9 +91,9 @@ export function PressKitContent() {
       ))}
 
       {files.length > 1 && (
-        <div className="legal-contact">
+        <div className="legal-contact" style={{ borderLeft: "none", borderTop: "3px solid var(--riga-red)" }}>
           <h2>Individual files</h2>
-          <ul>
+          <ul style={{ listStyle: "none", padding: 0 }}>
             {files.map((file) => (
               <li key={file.name}>
                 <a href={file.url} target="_blank" rel="noopener noreferrer">
