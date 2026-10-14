@@ -85,12 +85,12 @@ function Content({ pledge }: { pledge?: Pledge }) {
       </p>
 
       <div className="flex flex-col gap-3">
-        <Link
-          href="/press"
+        <a
+          href="/press/download"
           className="bg-riga-red px-7 py-4 text-center text-[13px] font-bold uppercase tracking-[0.15em] text-white hover:opacity-90"
         >
           Download the press kit
-        </Link>
+        </a>
         <Link
           href="/"
           className="bg-riga-red px-7 py-4 text-center text-[13px] font-bold uppercase tracking-[0.15em] text-white hover:opacity-90"

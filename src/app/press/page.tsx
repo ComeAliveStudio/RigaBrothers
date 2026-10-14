@@ -13,12 +13,23 @@ export default function Press() {
     <div className="legal-wrap">
       <p className="legal-brand">RIGA BROTHERS</p>
       <h1>Press Kit</h1>
+      <div className="mb-8 flex max-w-md flex-col gap-3">
+        <a
+          href="/press/download"
+          className="bg-riga-red px-7 py-4 text-center text-[13px] font-bold uppercase tracking-[0.15em] !text-white !no-underline hover:opacity-90"
+        >
+          Download the press kit
+        </a>
+        <Link
+          href="/"
+          className="bg-riga-red px-7 py-4 text-center text-[13px] font-bold uppercase tracking-[0.15em] !text-white !no-underline hover:opacity-90"
+        >
+          Back to the site
+        </Link>
+      </div>
       <Suspense fallback={<p className="legal-updated">Loading press kit…</p>}>
         <PressKitContent />
       </Suspense>
-      <p>
-        <Link href="/">← Back to the campaign</Link>
-      </p>
     </div>
   );
 }

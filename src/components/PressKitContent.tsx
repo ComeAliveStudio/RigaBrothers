@@ -90,9 +90,9 @@ export function PressKitContent() {
         </div>
       ))}
 
-      {files.length > 0 && (
+      {files.length > 1 && (
         <div className="legal-contact">
-          <h2>Downloads</h2>
+          <h2>Individual files</h2>
           <ul>
             {files.map((file) => (
               <li key={file.name}>
