@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
       metadata: {
         tier_id: tier.id,
       },
-      success_url: `${origin}/?pledge=success`,
+      success_url: `${origin}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/?pledge=cancelled`,
     });
 
