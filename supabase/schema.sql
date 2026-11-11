@@ -35,3 +35,10 @@ grant select on public.pledge_totals to anon, authenticated;
 
 create index if not exists pledges_status_idx on public.pledges (status);
 create index if not exists pledges_tier_idx on public.pledges (tier_id);
+
+-- Data API grants. Since 30 Oct 2026 Supabase no longer grants access to new
+-- tables in "public" automatically, so they must be explicit. RLS (above)
+-- still decides which rows anon/authenticated can see: pledges has no
+-- policy for them, so only the service role can read or write its rows.
+grant select, insert, update, delete on public.pledges to service_role;
+grant select on public.pledge_totals to anon, authenticated, service_role;

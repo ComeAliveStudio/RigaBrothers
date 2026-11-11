@@ -34,3 +34,8 @@ on conflict (id) do nothing;
 create policy "Public read press-kit files"
   on storage.objects for select
   using (bucket_id = 'press-kit');
+
+-- Data API grants (required for new tables since 30 Oct 2026). RLS above
+-- limits anon/authenticated to read-only access to press kit sections.
+grant select on public.press_kit_sections to anon, authenticated;
+grant select, insert, update, delete on public.press_kit_sections to service_role;
